@@ -16,11 +16,7 @@ public class Task3Level2 {
             isWork = false;
             System.out.print("Приложение заканчивает свою работу!");
         } else {
-            System.out.print("Введите слово для шифровнания: ");
-            String input = s.nextLine();
-            String encrypted = caesarCipher(input, (int) (Math.random() * 10));
-            System.out.println("Ваше слово в зашифрованном виде: " + encrypted);
-            isWork = true;
+            inputString(s);
         }
 
         while (isWork) {
@@ -30,14 +26,10 @@ public class Task3Level2 {
                 isWork = false;
                 System.out.println("Приложение заканчивает свою работу!");
             } else {
-                System.out.print("Введите слово для шифровнания: ");
-                String input = s.nextLine();
-                String encrypted = caesarCipher(input, (int) (Math.random() * 10));
-                System.out.println("Ваше слово в зашифрованном виде: " + encrypted);
+                inputString(s);
             }
-
-
         }
+        s.close();
     }
 
     /**
@@ -88,5 +80,12 @@ public class Task3Level2 {
             }
         }
         return sb.toString();
+    }
+
+    private static void inputString(Scanner s){
+        System.out.print("Введите слово для шифровнания: ");
+        String input = s.nextLine();
+        String encrypted = caesarCipher(input, (int) (Math.random() * 10));
+        System.out.println("Ваше слово в зашифрованном виде: " + encrypted);
     }
 }
