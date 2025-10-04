@@ -11,14 +11,13 @@ public class Task1Level3More {
         s.close();
     }
 
-
-
     /**
      * Метод преобразующий пользовательский ввод номера
+     *
      * @param numbers - исходный массив данных(список номеров)
      */
-    public static void formatedPhoneNumber(String[] numbers){
-        for(String number : numbers) {
+    public static void formatedPhoneNumber(String[] numbers) {
+        for (String number : numbers) {
             String digits = number;
             if (digits.startsWith("+7")) {
                 digits = digits.substring(2);
@@ -38,12 +37,14 @@ public class Task1Level3More {
             System.out.println("---");
         }
     }
+
     /**
      * Метод проверяет номер на соответствие формата и выводит информацию по номеру
+     *
      * @param number
      */
     private static void isValidPhoneNumber(String number) {
-        // ИСПРАВЛЕННОЕ регулярное выражение для формата +7-XXX-XXX-XX-XX
+
         String baseRegex = "\\+7-(\\d{3})-(\\d{3})-(\\d{2})-(\\d{2})";
 
         Pattern pattern = Pattern.compile(baseRegex);
