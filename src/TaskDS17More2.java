@@ -12,6 +12,11 @@ public class TaskDS17More2 {
 }
 
 class AnagramGrouper{
+    /**
+     * Метод преобразующий слово в анаграмму
+     * @param words исходный массив строк
+     * @return возвращает группу (key : value(group)
+     */
     public static Map<String, List<String>> groupAnagrams(String[] words){
         Map<String, List<String>> groupAnagrams = new HashMap<>();
 
