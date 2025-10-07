@@ -15,7 +15,7 @@ class AnagramGrouper{
     /**
      * Метод преобразующий слово в анаграмму
      * @param words исходный массив строк
-     * @return возвращает группу (key : value(group)
+     * @return если в массиве есть строки, то возвращает значение key : value
      */
     public static Map<String, List<String>> groupAnagrams(String[] words){
         Map<String, List<String>> groupAnagrams = new HashMap<>();
